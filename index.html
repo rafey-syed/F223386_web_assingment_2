@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart - Grocery Store</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
+
+    <!-- Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Fresh Mart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link myLink" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link myLink" href="#shop">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link myLink" href="#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="chatbox.html">ChatBot</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Landing Page Carousel -->
+    <section id="home" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/slide1.jpg" class="d-block w-100" alt="Fresh Vegetables">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Fresh Vegetables Delivered</h1>
+                    <p>Healthy, green and organic produce.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/slide2.jpg" class="d-block w-100" alt="Dairy Products">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Daily Dairy Essentials</h1>
+                    <p>Quality milk, cheese, butter and more.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/slide3.jpg" class="d-block w-100" alt="Fruits">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Fruits that Boost Immunity</h1>
+                    <p>Seasonal and exotic fruit selection.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#home" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="container py-5">
+        <h2 class="text-center mb-4">Our Products</h2>
+        <div class="container my-5">
+            <div class="row" id="card-gallery">
+                <!-- Cards will be inserted here dynamically by JS -->
+            </div>
+
+            <!-- Pagination Buttons -->
+            <div class="d-flex justify-content-center mt-4">
+
+                <button class="btn btn-success mx-2" onclick="showPage(1)">1</button>
+                <button class="btn btn-success mx-2" onclick="showPage(2)">2</button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews & Feedback Form -->
+    <section id="reviews" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Leave a Review</h2>
+            <form class="needs-validation" novalidate>
+                <div class="row mb-3">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                        <div class="invalid-feedback">Name is required.</div>
+                    </div>
+                    <div class="col">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                        <div class="invalid-feedback">Valid email is required.</div>
+                    </div>
+                </div>
+                <textarea class="form-control mb-3" rows="4" placeholder="Your Feedback" required></textarea>
+                <div class="invalid-feedback">Please enter your feedback.</div>
+                <button class="btn btn-success" type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer class="bg-success text-white py-4 mt-5">
+        <div class="container text-center">
+          <p class="mb-1">Fresh Mart &copy; 2025. All rights reserved.</p>
+          <p>Email: support@freshmart.com | Phone: +92 300 1234567</p>
+          <div>
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </footer>
+
+    <script src="bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript/index.js" defer></script>
+</body>
+
+</html>

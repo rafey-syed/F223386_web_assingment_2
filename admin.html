@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel - Fresh Mart
+  </title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+      <a class="navbar-brand" href="#">Fresh Mart</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container mt-5">
+    <div class="admin-container">
+      <h2 class="text-center mb-4">Admin Dashboard</h2>
+
+      <div class="mb-4">
+        <label for="actionSelect" class="form-label">Choose an action:</label>
+        <select id="actionSelect" class="form-select">
+          <option value="">-- Select --</option>
+          <option value="add">Add Product</option>
+          <option value="delete">Delete Product</option>
+          <option value="update">Update Product</option>
+        </select>
+      </div>
+
+      <!-- Back Button -->
+      <button type="button" class="btn btn-secondary" id="backBtn" style="display:none;">Back</button>
+
+      <!-- Add Product Form -->
+      <div id="addFormContainer" style="display: none;">
+        <h4>Add New Product</h4>
+        <form id="addProductForm">
+          <div class="mb-3">
+            <label for="productImage" class="form-label">Product Image</label>
+            <input type="file" class="form-control" id="productImage" accept="image/*" required>
+            <img id="imagePreview" src="#" alt="Preview" class="img-thumbnail mt-2" style="display:none;">
+          </div>
+          <div class="mb-3">
+            <label for="productTitle" class="form-label">Product Title</label>
+            <input type="text" class="form-control" id="productTitle" required>
+          </div>
+          <div class="mb-3">
+            <label for="productDescription" class="form-label">Product Description</label>
+            <textarea class="form-control" id="productDescription" rows="3" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="productStock" class="form-label">Stock</label>
+            <input type="number" class="form-control" id="productStock" min="0" required>
+          </div>
+          <button type="submit" class="btn btn-success">Add Product</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-success text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-1">Fresh Mart &copy; 2025. All rights reserved.</p>
+      <p>Email: support@freshmart.com | Phone: +92 300 1234567</p>
+      <div>
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="javascript/admin.js"></script>
+</body>
+
+</html>
