@@ -1,0 +1,64 @@
+/* -------the carousal css code -------- */
+/* Fix height for the carousel */
+.carousel-inner {
+    height: 600px; /* You can adjust this height */
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    color: #2ecc71; /* a pleasant green shade */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* subtle black shadow */
+}
+
+/* =============== end of the carousal css code =======================================================*/
+
+/* Ensure cards are clickable */
+.card-link {
+    text-decoration: none; /* Remove underline from the link */
+    display: block; /* Ensure the anchor tag takes up the full card space */
+}
+
+/* Card hover effect: Add shadow to make it look like it's floating */
+.card-link:hover .card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Light shadow effect */
+    transform: translateY(-5px); /* Slight lift effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Make sure shadow is not hidden behind other elements */
+.card {
+    position: relative;
+    z-index: 1; /* Ensure the card is above other elements when hovered */
+}
+
+/* Keep the card size and behavior consistent */
+.card {
+    height: 350px; /* Fixed height for the entire card */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    object-position: center;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
